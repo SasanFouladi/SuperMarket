@@ -1,0 +1,22 @@
+# .travis.yml
+dist: precise
+language: php
+
+matrix:
+  include:
+    - php: 7.3
+    - php: 7.4
+
+
+cache:
+  directories:
+    - vendor
+
+before_script:
+  - cp .env.travis .env
+  - composer self-update
+  - composer install --no-interaction
+  - phpenv config-rm xdebug.ini
+
+script:
+  - vendor/bin/phpunit
