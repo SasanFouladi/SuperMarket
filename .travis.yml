@@ -13,7 +13,6 @@ cache:
     - vendor
 
 before_script:
-  - cp .env.travis .env
   - composer self-update
   - composer install --no-interaction
   - phpenv config-rm xdebug.ini
