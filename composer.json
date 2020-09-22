@@ -1,0 +1,14 @@
+{
+  "name": "Supermarket",
+  "require": {
+    "phpunit/phpunit": "^9.0"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Supermarket\\": "src/",
+      "Tests\\": "tests/"
+    }
+  }
+
+}
